@@ -69,9 +69,25 @@ const DomoList = (props) => {
         <h3 className="domoHeight">Height: {domo.height} units</h3>
       </div>
     );
+
+    //// Intended page change: ////
+    // return (
+    //   <div key={domo.id} className="domo">
+    //     <h3 className="domoName">{domo.name}</h3>
+    //     <img
+    //       src="/assets/img/domo.png"
+    //       alt="domo"
+    //       className="domo"
+    //       style={{
+    //         height: `${domo.height * 100}px`,
+    //         width: `${domo.width * 100}px`,
+    //       }}/>
+    //   </div>
+    // );
   });
+
   return (
-    <div className="domoList">
+    <div className="domoListViewer">
       {domoNodes}
     </div>
   );

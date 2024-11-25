@@ -41,8 +41,21 @@ const getDomos = async (req, res) => {
   }
 };
 
+const viewPage = async (req, res) => {
+  try {
+    const query = { owner: req.session.account._id };
+    const docs = await Domo.find(query).select('name height').lean().exec();
+
+    return res.json({ domos: docs });
+  } catch (err) {
+    console.log(err);
+    return res.status(500).json({ error: 'Error retrieving domos!' });
+  }
+};
+
 module.exports = {
   makerPage,
   makeDomo,
   getDomos,
+  viewPage,
 };

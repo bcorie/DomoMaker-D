@@ -202,7 +202,6 @@ nav:nth-child(1) {
 }
 
 .domo {
-    width: 95%;
     margin: 0 auto;
     margin-top: 2px;
     margin-bottom: 2px;
@@ -219,6 +218,11 @@ nav:nth-child(1) {
     border-color: rgba(255,255,255, 0.8);
     transition: background-color 2.6s ease-out;
     background-color: #66bfff;
+}
+
+.domo > img {
+    min-width: 100px;
+    min-height: 100px;
 }
 
 img.domoFace {
@@ -271,4 +275,10 @@ h3.domoHeight {
 
 .domo:last-child {
     margin-bottom:10px;
+}
+
+.domoListViewer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
